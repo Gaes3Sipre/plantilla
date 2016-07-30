@@ -1,0 +1,124 @@
+.documentation-header {
+  background-color: #009688;
+  height: 112px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+.documentation-content-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+}
+.documentation-content-wrapper #header-brand {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: column nowrap;
+  width: 28%;
+}
+.documentation-content-wrapper .doc-sidetoc {
+  min-width: 28%;
+  width: 28%;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.33);
+  background-color: #ffffff;
+  z-index: 2;
+}
+.documentation-content-wrapper .doc-content {
+  flex: 1 1 auto;
+}
+.documentation-content-wrapper .doc-content .theme-info {
+  color: #727272;
+}
+.documentation-content-wrapper .doc-content .theme-info a {
+  color: #009688;
+}
+.documentation-content-wrapper .doc-content .table > tbody > tr > td {
+  line-height: 1;
+}
+.tocify {
+  top: 64px;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 0px;
+  margin-left: 0px;
+  min-height: 100%;
+  width: 28%;
+  border: none;
+}
+#doc_tocx {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 28%;
+  background: #ffffff;
+  background-image: url('../img/logo_main.png');
+  background-repeat: no-repeat;
+  background-position: 24px 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding-top: 64px;
+}
+.tocify ul,
+.tocify li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 30px;
+}
+.tocify li a {
+  color: #212121;
+  font-weight: 500;
+  font-size: 14px;
+  height: 31px;
+  padding: 0 16px;
+  display: block;
+}
+.tocify li a:hover,
+.tocify li a:focus {
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.085);
+}
+.tocify-header {
+  text-indent: 10px;
+}
+.tocify-subheader {
+  text-indent: 24px;
+  display: none;
+}
+.tocify-subheader li a {
+  font-weight: 400;
+  font-size: 13px;
+  height: 24px;
+}
+.tocify-subheader .tocify-subheader {
+  text-indent: 30px;
+}
+.tocify-subheader .tocify-subheader .tocify-subheader {
+  text-indent: 40px;
+}
+.tocify-subheader .tocify-subheader {
+  text-indent: 48px;
+  display: none;
+}
+.tocify > ul > li.tocify-focus a {
+  background: rgba(0, 0, 0, 0.085);
+}
+.tocify ul ul li li.tocify-focus a {
+  color: #0277bd;
+}
+.external_link {
+  padding-right: 16px;
+  margin-right: 4px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgElEQVQYV5XQMQpCQQxF0fNX4G60stFGdyBYuSE3InwQBG20URDclPKKkSAfxXST3FxepvO9nm3c/QDHOGAU8IxZWXhggkB7bHAMGP0clwI3aN36DawRAvVY4VYzxljBHba444pp4CFjve8t+Rtc4vTxVYtc22LFmEeaQ5XlSLwAJVAaAqoDe/cAAAAASUVORK5CYII=');
+  background-position: right 3px;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=bemat-admin-documentation.css.map */

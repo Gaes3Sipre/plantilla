@@ -1,0 +1,158 @@
+@import "variables.less";
+
+// Documentation Header
+// ----------------------------------------------
+.documentation-header{
+	background-color:red;
+	height: 112px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+
+
+.documentation-content-wrapper{
+	display:flex;
+	flex-flow:row nowrap;
+	align-items:stretch;
+
+	#header-brand{
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		flex-flow: column nowrap;
+		width:@sidebar_width;
+	}
+
+	.doc-sidetoc{
+		min-width:@sidebar_width;
+		width:@sidebar_width;
+		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.33);
+		background-color: rgb(255, 255, 255);
+		z-index:2;
+	}
+
+	.doc-content{
+		flex:1 1 auto;
+
+		.theme-info{
+			color:#727272;
+
+			a{
+				color:@brand-primary;
+			}
+		}
+
+		.table > tbody > tr > td{
+			line-height:1;
+		}
+	}
+}
+
+
+.tocify{
+	top: 64px;
+	bottom: 0px;
+	left: 0px;
+	border-radius: 0px;
+	margin-left:0px;
+	min-height:100%;
+	width:@sidebar_width;
+	border:none;
+}
+
+
+
+
+// toc ---------------------------------
+#doc_tocx {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: @sidebar_width;
+	background: @white;
+	background-image: url('../img/logo_main.png');
+	background-repeat: no-repeat;
+	background-position: 24px 24px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.20);
+	box-sizing: border-box;
+	padding-top: 64px;
+}
+.tocify {
+	ul,
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: none;
+		line-height: 30px;
+	}
+	li {
+		a {
+			color: @text_primary_color;
+			font-weight:500;
+			font-size:14px;
+			height:31px;
+			padding: 0 16px;
+			display: block;
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				background: @background_color_default;
+			}
+		}
+	}
+	&-header {
+		text-indent: 10px;
+	}
+	&-subheader {
+		text-indent: 24px;
+		display: none;
+		li {
+			a {
+				font-weight:400;
+				font-size:13px;
+				height:24px;
+			}
+		}
+		.tocify-subheader {
+			text-indent: 30px;
+			.tocify-subheader {
+				text-indent: 40px;
+			}
+		}
+		.tocify-subheader {
+			text-indent: 48px;
+			display: none;
+		}
+	}
+	> ul {
+		> li.tocify-focus {
+			a {
+				background: @background_color_default;
+			}
+		}
+	}
+	ul ul li {
+		li.tocify-focus {
+			a {
+				color: #0277bd;
+			}
+		}
+	}
+}
+
+.external_link {
+	padding-right: 16px;
+	margin-right: 4px;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgElEQVQYV5XQMQpCQQxF0fNX4G60stFGdyBYuSE3InwQBG20URDclPKKkSAfxXST3FxepvO9nm3c/QDHOGAU8IxZWXhggkB7bHAMGP0clwI3aN36DawRAvVY4VYzxljBHba444pp4CFjve8t+Rtc4vTxVYtc22LFmEeaQ5XlSLwAJVAaAqoDe/cAAAAASUVORK5CYII=');
+	background-position: right 3px;
+	background-repeat: no-repeat;
+}
